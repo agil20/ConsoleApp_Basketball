@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "DataAcces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entites": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataAcces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAcces.dll": {}
+        }
+      },
+      "Entites/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Entites.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entites.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DataAcces/1.0.0": {
+      "type": "project",
+      "path": "../DataAcces/DataAcces.csproj",
+      "msbuildProject": "../DataAcces/DataAcces.csproj"
+    },
+    "Entites/1.0.0": {
+      "type": "project",
+      "path": "../Entites/Entites.csproj",
+      "msbuildProject": "../Entites/Entites.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "DataAcces >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\User\\.nuget\\packages\\": {},
@@ -14,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj",
-      "projectName": "ConsoleApp_Basketball",
-      "projectPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\Business\\Business.csproj",
+      "projectName": "Business",
+      "projectPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\obj\\",
+      "outputPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -38,7 +75,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\DataAcces\\DataAcces.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\DataAcces\\DataAcces.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -11,6 +11,10 @@ namespace DataAcces
     {
         public static List<Player>Players { get; set; }
         public static List<Groups>Groups  { get; set; }
-
+       static DataConnect()
+        {
+            Players=new List<Player>(); 
+            Groups=new List<Groups>();
+        }
     }
 }

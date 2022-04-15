@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj",
         "projectName": "ConsoleApp_Basketball",
-        "projectPath": "C:\\Users\\User\\Desktop\\Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\obj\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\ConsoleApp_Basketball\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
