@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConsoleApp_Basketball\ConsoleApp_Basketball.csproj" />
     <ProjectReference Include="..\DataAcces\DataAcces.csproj" />
   </ItemGroup>
 

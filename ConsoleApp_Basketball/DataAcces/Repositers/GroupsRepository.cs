@@ -42,8 +42,9 @@ namespace Business.Repositers
         {
             try
             {
-                return DataAcces.DataConnect.Groups.FindAll(filter);
-           
+                return filter == null ? DataAcces.DataConnect.Groups.FindAll(filter) : DataAcces.DataConnect.Groups.FindAll(filter);
+
+
             }
             catch (Exception)
             {
@@ -56,7 +57,7 @@ namespace Business.Repositers
         {
             try
             {
-               return  DataAcces.DataConnect.Groups.Find(filter);
+                return filter == null ? DataAcces.DataConnect.Groups[0] : DataAcces.DataConnect.Groups.Find(filter);
 
             }
             catch (Exception)
