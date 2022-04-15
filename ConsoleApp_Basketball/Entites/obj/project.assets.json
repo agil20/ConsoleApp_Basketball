@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball12\\ConsoleApp_Basketball\\Entites\\Entites.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketballll\\ConsoleApp_Basketball\\Entites\\Entites.csproj",
       "projectName": "Entites",
-      "projectPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball12\\ConsoleApp_Basketball\\Entites\\Entites.csproj",
+      "projectPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketballll\\ConsoleApp_Basketball\\Entites\\Entites.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketball12\\ConsoleApp_Basketball\\Entites\\obj\\",
+      "outputPath": "C:\\Users\\User\\Source\\Repos\\ConsoleApp_Basketballll\\ConsoleApp_Basketball\\Entites\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -4,7 +4,7 @@ namespace Utilities.Helper
 {
     public class Natification
     {
-
+      
         public static void Print(ConsoleColor color,string mesagge)
         { Console.ForegroundColor = color; Console.WriteLine(mesagge); 
             Console.ResetColor();
