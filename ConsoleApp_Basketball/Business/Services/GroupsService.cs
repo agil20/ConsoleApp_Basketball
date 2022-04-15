@@ -37,7 +37,11 @@ namespace Business.Services
         {
             try
             {
-              
+
+           Groups groups=     DataAcces.DataConnect.Groups.Find(x => x.Id == id);
+                _groupsRepository.Delete(groups);
+                return groups;
+                
             }
             catch (Exception)
             {
@@ -48,12 +52,27 @@ namespace Business.Services
 
         public Groups GetPlayer(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return _groupsRepository.GetOne(x => x.Name == name);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         public Groups Update(int id, Groups groups)
         {
-            throw new NotImplementedException();
+            Groups groups1 = DataAcces.DataConnect.Groups.Find(x => x.Id == id);
+            groups1.Name = groups.Name;
+
+            _groupsRepository.Update(groups1);
+            return groups1;
+
         }
     }
 }
