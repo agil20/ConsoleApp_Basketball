@@ -18,6 +18,7 @@ namespace ConsoleApp_Basketball
 
 
             int num;
+            
             Natification.Print(ConsoleColor.Blue, "Welcome Boksetball");
             do
             {
@@ -132,12 +133,27 @@ namespace ConsoleApp_Basketball
                                     Console.WriteLine(item.Name);
                                 }
 
+                                break;
+                            case 5:
+                             getplayer:   Natification.Print(ConsoleColor.Cyan, "Enter id");
+                                string payerid=Console.ReadLine();
+                                int id5;
+                                bool IsExist5 = int.TryParse(payerid, out id5);
+                                if (IsExist5)
+                                {
+                                    Console.WriteLine(playerService.GetPlayer(id5).Name);
+
+                                }
+                                else
+                                {
+                                    Natification.Print(ConsoleColor.Red, "Please note");
+                                    goto getplayer;
+
+                                }
 
 
                                 break;
-                                
-
-
+                              
                         }
                     }
                     else
