@@ -50,11 +50,11 @@ namespace Business.Services
             }
         }
 
-        public Groups GetPlayer(string name)
+        public Groups GetPlayer(int id)
         {
             try
             {
-                return _groupsRepository.GetOne(x => x.Name == name);
+                return _groupsRepository.GetOne(x => x.Id == id);
 
             }
             catch (Exception)
@@ -74,5 +74,20 @@ namespace Business.Services
             return groups1;
 
         }
+
+        public List<Groups> GetAll()
+        {
+            try
+            {
+                return _groupsRepository.GetAll(x => x.Id == x.Id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+       
     }
 }

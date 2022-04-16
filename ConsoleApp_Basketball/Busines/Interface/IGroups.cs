@@ -12,7 +12,8 @@ namespace Business.Interface
         Groups Create(Groups groups);
         Groups Update(int id, Groups groups);
         Groups Delete(int id);
-        Groups GetPlayer(string name);
+        Groups GetPlayer(int id);
+        List<Groups> GetAll();
 
     }
 }
