@@ -11,7 +11,7 @@ namespace Business.Services
 {
     public class PlayerService : IPlayer
     {
-        public int Count { get; set; }
+        public static int Count { get; set; }
         private PlayerRepository _playerRepository;
         public PlayerService ()
         {
@@ -21,9 +21,10 @@ namespace Business.Services
         {
             try
             {
+                
+                Count++;
                 player.Id = Count;
-          
-                Count++; _playerRepository.Create(player);
+                _playerRepository.Create(player);
 
                 return player;
             }
