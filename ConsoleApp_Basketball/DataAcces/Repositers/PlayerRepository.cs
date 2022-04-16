@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Repositers
+namespace DataAcces.Repositers
 {
     public class PlayerRepository : IRepository<Player>
     {

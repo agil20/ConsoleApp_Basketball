@@ -1,5 +1,5 @@
 ﻿using Business.Interface;
-using Business.Repositers;
+using DataAcces.Repositers;
 using Entites.Models;
 using System;
 using System.Collections.Generic;
@@ -13,9 +13,9 @@ namespace Business.Services
     {
         public int Count { get; set; }
         private PlayerRepository _playerRepository;
-        public PlayerService (PlayerRepository playerRepository)
+        public PlayerService ()
         {
-            _playerRepository = playerRepository;
+            _playerRepository =new PlayerRepository();
         }
         public Player Create(Player player)
         {

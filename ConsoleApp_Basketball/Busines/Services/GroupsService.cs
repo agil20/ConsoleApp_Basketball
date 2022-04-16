@@ -1,5 +1,5 @@
 ﻿using Business.Interface;
-using Business.Repositers;
+using DataAcces.Repositers;
 using Entites.Models;
 using System;
 using System.Collections.Generic;
@@ -13,9 +13,9 @@ namespace Business.Services
     {
         public int Count { get; set; }
         private GroupsRepository _groupsRepository;
-        public GroupsService(GroupsRepository groupsRepository)
+        public GroupsService()
         {
-            _groupsRepository = groupsRepository;
+            _groupsRepository = new GroupsRepository();
         }
         public Groups Create(Groups groups)
         {
