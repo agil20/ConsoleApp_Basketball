@@ -1,6 +1,7 @@
 ﻿using Business.Services;
 using Entites.Models;
 using System;
+using System.Collections.Generic;
 using Utilities.Helper;
 
 
@@ -121,6 +122,18 @@ namespace ConsoleApp_Basketball
                                     goto delete;
 
                                 }
+                                break;
+                                case 4:
+
+                            List<Player> list = playerService.GetAll();
+
+                                foreach (var item in list)
+                                {
+                                    Console.WriteLine(item.Name);
+                                }
+
+
+
                                 break;
                                 
 

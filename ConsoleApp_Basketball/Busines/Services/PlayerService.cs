@@ -51,20 +51,8 @@ namespace Business.Services
             }
         }
 
-        public Player GetPlayer(string name)
-        {
-            try
-            {
-                return _playerRepository.GetOne(x => x.Name == name);
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-        }
+       
+        
 
         public Player Update(int id, Player Player)
         {
@@ -74,6 +62,35 @@ namespace Business.Services
             _playerRepository.Update(player1);
             return player1;
 
+        }
+
+        public Player GetPlayer(int id)
+        {
+            try
+            {
+                return _playerRepository.GetOne(x => x.Id == id);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public List<Player> GetAll()
+        {
+            try
+            {
+           return      _playerRepository.GetAll(x => x.Name == x.Name);
+               
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

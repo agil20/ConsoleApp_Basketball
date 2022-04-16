@@ -13,7 +13,9 @@ namespace Business.Interface
         Player Create(Player player);
         Player Update(int id, Player player);
         Player Delete(int id);
-        Player GetPlayer(string name);
+        Player GetPlayer(int id);
+        List<Player> GetAll();
+       
 
 
 
