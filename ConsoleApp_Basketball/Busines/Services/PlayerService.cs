@@ -10,9 +10,7 @@ using System.Threading.Tasks;
 namespace Business.Services
 {
     public class PlayerService : IPlayer
-    {/// <summary>
-    /// 
-    /// </summary>
+    {
         public static int Count { get; set; }
         private PlayerRepository _playerRepository;
         public PlayerService ()

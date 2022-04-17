@@ -50,7 +50,7 @@ namespace ConsoleApp_Basketball
                                     {
                                         switch (num)
                                         {
-                                            case 1:
+                                            case (int)Natification.Myoption.Create:
                                                 Natification.Print(ConsoleColor.White, "Enter name");
                                                 string name = Console.ReadLine();
                                             Entervalue:
@@ -77,7 +77,7 @@ namespace ConsoleApp_Basketball
                                                     goto Entervalue;
                                                 }
                                                 break;
-                                            case 2:
+                                            case (int)Natification.Myoption.Update:
                                                 Natification.Print(ConsoleColor.Yellow, "New Player Enter");
                                                 Natification.Print(ConsoleColor.Yellow, "Enter Name");
                                                 string name1 = Console.ReadLine();
@@ -114,7 +114,7 @@ namespace ConsoleApp_Basketball
                                                     goto Entervalue1;
                                                 }
 
-                                            case 3:
+                                            case (int)Natification.Myoption.Remove:
 
                                                 Natification.Print(ConsoleColor.Cyan, "Enter the player ID you want to delete ");
 
@@ -133,7 +133,7 @@ namespace ConsoleApp_Basketball
 
                                                 }
                                                 break;
-                                            case 4:
+                                            case (int)Natification.Myoption.GetAll:
 
                                                 List<Player> list = playerService.GetAll();
 
@@ -143,7 +143,7 @@ namespace ConsoleApp_Basketball
                                                 }
 
                                                 break;
-                                            case 5:
+                                            case (int)Natification.Myoption.Getone:
                                             getplayer: Natification.Print(ConsoleColor.Cyan, "Enter id");
                                                 string payerid = Console.ReadLine();
                                                 int id5;
@@ -161,7 +161,7 @@ namespace ConsoleApp_Basketball
                                                 }
 
                                                 break;
-                                            case 0: goto Open;
+                                            case (int)Natification.Myoption.Quit: goto Open;
                                             default: goto Enter;
 
                                         }
@@ -198,7 +198,7 @@ namespace ConsoleApp_Basketball
                                     {
                                         switch (num)
                                         {
-                                            case 1:
+                                            case (int)Natification.Myoption.Create:
                                                 Natification.Print(ConsoleColor.White, "Enter name");
                                                 string name = Console.ReadLine();
                                             Entervalue:
@@ -225,7 +225,7 @@ namespace ConsoleApp_Basketball
                                                     goto Entervalue;
                                                 }
                                                 break;
-                                            case 2:
+                                            case (int)Natification.Myoption.Update:
                                                 Natification.Print(ConsoleColor.Yellow, "New Player Enter");
                                                 Natification.Print(ConsoleColor.Yellow, "Enter Name");
                                                 string name1 = Console.ReadLine();
@@ -265,7 +265,7 @@ namespace ConsoleApp_Basketball
                                                     goto Entervalue1;
                                                 }
 
-                                            case 3:
+                                            case (int)Natification.Myoption.Remove:
 
                                                 Natification.Print(ConsoleColor.Cyan, "Enter the player ID you want to delete ");
 
@@ -284,7 +284,7 @@ namespace ConsoleApp_Basketball
 
                                                 }
                                                 break;
-                                            case 4:
+                                            case (int)Natification.Myoption.GetAll:
 
                                                 List<Groups> list = groupsService.GetAll();
 
@@ -294,7 +294,7 @@ namespace ConsoleApp_Basketball
                                                 }
 
                                                 break;
-                                            case 5:
+                                            case (int)Natification.Myoption.Getone:
                                             getplayer: Natification.Print(ConsoleColor.Cyan, "Enter id");
                                                 string payerid = Console.ReadLine();
                                                 int id5;
@@ -312,7 +312,7 @@ namespace ConsoleApp_Basketball
                                                 }
 
                                                 break;
-                                            case 0:
+                                            case (int)Natification.Myoption.Quit:
                                                 goto Open;
                                             default: goto Enter;
 

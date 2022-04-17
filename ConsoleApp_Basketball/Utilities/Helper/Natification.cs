@@ -14,11 +14,8 @@ namespace Utilities.Helper
         }
       public  enum Myoption
         {
-            /* Natification.Print(ConsoleColor.Green, "1.Create Player\n" +
-                    "2.Update Player\n" +
-                    "3.Remove Player\n" +
-                    "4.Get All Player");*/
-            Create,Update,Remove,GetAll,Getone
+         
+              Create=1,Update=2,Remove=3,GetAll=4,Getone=5,Quit=0
         }
        
     }
