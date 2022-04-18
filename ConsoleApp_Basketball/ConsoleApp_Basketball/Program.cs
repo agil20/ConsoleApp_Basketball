@@ -100,7 +100,7 @@ namespace ConsoleApp_Basketball
                                      "3.Remove Group\n" +
                                      "4.Get All Group\n" +
                                      "5.Get one Group\n" +
-                                     "6.Quit\n"
+                                     "0.Quit\n"
                                      );
 
                                     string option = Console.ReadLine();
