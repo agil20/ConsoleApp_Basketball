@@ -61,28 +61,29 @@ namespace Business.Services
      
 
             try
-            {   Predicate<Player> predicate = x => x.Id == id;
-                bool result=predicate(Player);
-                if (result)
-                {
-                    Player player1 = DataAcces.DataConnect.Players.Find(x => x.Id == id);
-                    player1.Name = Player.Name;
+            {
+                Predicate<Player> predicate1 = x => x.Id == id;
+                Player players2 = DataAcces.DataConnect.Players.Find(predicate1);
 
-                    _playerRepository.Update(player1);
-                    return player1;
+                if (players2 != null)
+                {
+                    Player players1 = DataAcces.DataConnect.Players.Find(x => x.Id == id);
+                    players1.Name = Player.Name;
+
+                    _playerRepository.Update(players1);
+                    return players1;
                 }
                 else
                 {
                     Natification.Print(ConsoleColor.Red, "Because there is no such id, a new one was created");
-                     Count++;
+                    Count++;
                     Player.Id = Count;
                     _playerRepository.Create(Player);
 
                     return Player;
-
                 }
 
-               
+
 
             }
             catch (Exception)

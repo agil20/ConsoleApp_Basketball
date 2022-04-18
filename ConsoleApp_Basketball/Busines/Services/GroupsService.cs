@@ -22,9 +22,10 @@ namespace Business.Services
         {
             try
             {
+                Count++;
                 groups.Id = Count;
                 _groupsRepository.Create(groups);
-                Count++;
+            
                 return groups;
             }
             catch (Exception)
@@ -82,14 +83,15 @@ namespace Business.Services
         public Groups Update(int id, Groups groups)
         {
             Predicate<Groups> predicate1 = x=>x.Id == id;
-            bool result = predicate1(groups);
-                if (result)
+            Groups groups2 = DataAcces.DataConnect.Groups.Find(predicate1);
+            
+                if (groups2 != null )
             {
                 Groups groups1 = DataAcces.DataConnect.Groups.Find(x => x.Id == id);
                 groups1.Name = groups.Name;
 
                 _groupsRepository.Update(groups1);
-                return groups1;
+                return groups;
             }
             else
             {
