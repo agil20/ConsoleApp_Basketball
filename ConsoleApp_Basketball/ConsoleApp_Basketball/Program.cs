@@ -19,10 +19,11 @@ namespace ConsoleApp_Basketball
             int num;
             do
             {
+            option:
                 Natification.Print(ConsoleColor.Blue, "Welcome Boksetball");
             Open: PlayerService playerService = new PlayerService(); Natification.Print(ConsoleColor.Cyan, "1.Player\n" +
                                                 "2.Group");
-            option: string option2 = Console.ReadLine();
+            string option2 = Console.ReadLine();
               
                 int Isoption;
                 bool optionn = int.TryParse(option2, out Isoption);
@@ -159,7 +160,7 @@ namespace ConsoleApp_Basketball
 
                 }
 
-            } while (true);
+            } while (true); 
 
         }
     }
