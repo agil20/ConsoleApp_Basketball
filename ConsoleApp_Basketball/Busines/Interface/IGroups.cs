@@ -12,7 +12,7 @@ namespace Business.Interface
         Groups Create(Groups groups);
         Groups Update(int id, Groups groups);
         Groups Delete(int id);
-        Groups GetPlayer(int id);
+        Groups GetGroups(int id);
         List<Groups> GetAll();
 
     }

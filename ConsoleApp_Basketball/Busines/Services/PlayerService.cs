@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utilities.Helper;
 
 namespace Business.Services
 {
@@ -57,11 +58,40 @@ namespace Business.Services
 
         public Player Update(int id, Player Player)
         {
-            Player player1 = DataAcces.DataConnect.Players.Find(x => x.Id == id);
-            player1.Name=Player.Name;
+     
 
-            _playerRepository.Update(player1);
-            return player1;
+            try
+            {   Predicate<Player> predicate = x => x.Id == id;
+                bool result=predicate(Player);
+                if (result)
+                {
+                    Player player1 = DataAcces.DataConnect.Players.Find(x => x.Id == id);
+                    player1.Name = Player.Name;
+
+                    _playerRepository.Update(player1);
+                    return player1;
+                }
+                else
+                {
+                    Natification.Print(ConsoleColor.Red, "Because there is no such id, a new one was created");
+                     Count++;
+                    Player.Id = Count;
+                    _playerRepository.Create(Player);
+
+                    return Player;
+
+                }
+
+               
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+           
 
         }
 
@@ -69,7 +99,20 @@ namespace Business.Services
         {
             try
             {
-                return _playerRepository.GetOne(x => x.Id == id);
+                Predicate<Player> predicate = x => x.Id == id;
+               Player player = new Player();
+                bool result = predicate(player);
+                if (result)
+                {
+                    return _playerRepository.GetOne(x => x.Id == id);
+                }
+                else
+                {
+                    Natification.Print(ConsoleColor.Red, "There is no such id");
+                    return player;
+                }
+
+               
 
             }
             catch (Exception)

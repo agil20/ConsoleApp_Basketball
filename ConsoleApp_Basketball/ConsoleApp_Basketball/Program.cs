@@ -144,6 +144,7 @@ namespace ConsoleApp_Basketball
 
                                                 break;
                                             case (int)Natification.Myoption.Getone:
+
                                             getplayer: Natification.Print(ConsoleColor.Cyan, "Enter id");
                                                 string payerid = Console.ReadLine();
                                                 int id5;
@@ -301,7 +302,7 @@ namespace ConsoleApp_Basketball
                                                 bool IsExist5 = int.TryParse(payerid, out id5);
                                                 if (IsExist5)
                                                 {
-                                                    Console.WriteLine(groupsService.GetPlayer(id5).Name);
+                                                    Console.WriteLine(groupsService.GetGroups(id5).Name);
 
                                                 }
                                                 else

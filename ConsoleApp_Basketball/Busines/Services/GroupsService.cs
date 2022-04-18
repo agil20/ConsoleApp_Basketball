@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utilities.Helper;
 
 namespace Business.Services
 {
@@ -50,11 +51,24 @@ namespace Business.Services
             }
         }
 
-        public Groups GetPlayer(int id)
+        public Groups GetGroups(int id)
         {
             try
             {
-                return _groupsRepository.GetOne(x => x.Id == id);
+                Predicate<Groups> predicate = x => x.Id == id;
+                Groups groups =new Groups();
+                bool result = predicate(groups);
+                if (result)
+                {
+                    return _groupsRepository.GetOne(x => x.Id == id);
+                }
+                else 
+                {
+                    Natification.Print(ConsoleColor.Red, "There is no such id");
+                    return groups;
+                }
+              
+                
 
             }
             catch (Exception)
@@ -67,11 +81,27 @@ namespace Business.Services
 
         public Groups Update(int id, Groups groups)
         {
-            Groups groups1 = DataAcces.DataConnect.Groups.Find(x => x.Id == id);
-            groups1.Name = groups.Name;
+            Predicate<Groups> predicate1 = x=>x.Id == id;
+            bool result = predicate1(groups);
+                if (result)
+            {
+                Groups groups1 = DataAcces.DataConnect.Groups.Find(x => x.Id == id);
+                groups1.Name = groups.Name;
 
-            _groupsRepository.Update(groups1);
-            return groups1;
+                _groupsRepository.Update(groups1);
+                return groups1;
+            }
+            else
+            {
+                Natification.Print(ConsoleColor.Red, "Because there is no such id, a new one was created");
+                Count++;
+                groups.Id = Count;
+                _groupsRepository.Create(groups);
+              
+                return groups;
+
+            }
+           
 
         }
 

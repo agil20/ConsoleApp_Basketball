@@ -19,7 +19,8 @@
       },
       "Busines/1.0.0": {
         "dependencies": {
-          "DataAcces": "1.0.0"
+          "DataAcces": "1.0.0",
+          "Utilities": "1.0.0"
         },
         "runtime": {
           "Busines.dll": {}
