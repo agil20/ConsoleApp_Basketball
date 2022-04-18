@@ -9,6 +9,7 @@ namespace Entites.Models
 {
     public class Player:IEntity
     {
+        public string Surname { get; set; }
         private static int _id { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }

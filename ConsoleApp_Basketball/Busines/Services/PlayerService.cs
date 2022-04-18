@@ -69,6 +69,8 @@ namespace Business.Services
                 {
                     Player players1 = DataAcces.DataConnect.Players.Find(x => x.Id == id);
                     players1.Name = Player.Name;
+                    players1.Surname = Player.Surname;
+                    players1.Value = Player.Value;
 
                     _playerRepository.Update(players1);
                     return players1;

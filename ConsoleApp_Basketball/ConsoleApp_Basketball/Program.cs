@@ -53,9 +53,12 @@ namespace ConsoleApp_Basketball
                                             case (int)Natification.Myoption.Create:
                                                 Natification.Print(ConsoleColor.White, "Enter name");
                                                 string name = Console.ReadLine();
+                                                Natification.Print(ConsoleColor.White, "Enter Surname");
+                                                string surname = Console.ReadLine();
                                             Entervalue:
                                                 Natification.Print(ConsoleColor.White, "Enter value");
                                                 string value = Console.ReadLine();
+
                                                 int Value;
                                                 bool IsValue = int.TryParse(value, out Value);
                                                 if (IsValue)
@@ -63,11 +66,14 @@ namespace ConsoleApp_Basketball
                                                     Player player = new Player
                                                     {
                                                         Name = name,
-                                                        Value = Value
+                                                        Value = Value,
+                                                        Surname=surname
+                                                        
                                                     };
 
                                                     playerService.Create(player);
-                                                    Natification.Print(ConsoleColor.Green, $"{player.Name} added");
+                                                    Natification.Print(ConsoleColor.Green, $"{player.Name}\n" +
+                                                        $"{player.Surname} added");
 
 
                                                 }
@@ -81,6 +87,8 @@ namespace ConsoleApp_Basketball
                                                 Natification.Print(ConsoleColor.Yellow, "New Player Enter");
                                                 Natification.Print(ConsoleColor.Yellow, "Enter Name");
                                                 string name1 = Console.ReadLine();
+                                                Natification.Print(ConsoleColor.Yellow, "Enter Surname");
+                                                string surname1 = Console.ReadLine();
                                             Entervalue1:
                                                 Natification.Print(ConsoleColor.Yellow, "Enter Value");
                                                 string value1 = Console.ReadLine();
@@ -94,7 +102,7 @@ namespace ConsoleApp_Basketball
                                                     bool IsId1 = int.TryParse(id1, out id);
                                                     if (IsId1)
                                                     {
-                                                        Player player = new Player { Name = name1, Value = Value1 };
+                                                        Player player = new Player { Name = name1, Value = Value1,Surname=surname1 };
                                                         playerService.Update(id, player);
                                                         Natification.Print(ConsoleColor.Green, $"{player.Name} added");
 
