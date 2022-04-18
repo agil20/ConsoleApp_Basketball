@@ -23,6 +23,7 @@ namespace ConsoleApp_Basketball
             Open: PlayerService playerService = new PlayerService(); Natification.Print(ConsoleColor.Cyan, "1.Player\n" +
                                                 "2.Group");
             option: string option2 = Console.ReadLine();
+              
                 int Isoption;
                 bool optionn = int.TryParse(option2, out Isoption);
                 if (optionn)

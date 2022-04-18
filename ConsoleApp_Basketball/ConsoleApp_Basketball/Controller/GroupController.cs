@@ -17,9 +17,11 @@ namespace ConsoleApp_Basketball.Controller
         {
             Natification.Print(ConsoleColor.White, "Enter name");
             string name = Console.ReadLine();
+            Console.Clear();
         Entervalue:
             Natification.Print(ConsoleColor.White, "Enter value");
             string value = Console.ReadLine();
+            Console.Clear();
             int Value;
             bool IsValue = int.TryParse(value, out Value);
             if (IsValue)
@@ -46,9 +48,11 @@ namespace ConsoleApp_Basketball.Controller
             Natification.Print(ConsoleColor.Yellow, "New Player Enter");
             Natification.Print(ConsoleColor.Yellow, "Enter Name");
             string name1 = Console.ReadLine();
+            Console.Clear();
         Entervalue1:
             Natification.Print(ConsoleColor.Yellow, "Enter Value");
             string value1 = Console.ReadLine();
+            Console.Clear();
             int Value1;
             bool IsValue1 = int.TryParse(value1, out Value1);
             if (IsValue1)
@@ -84,6 +88,7 @@ namespace ConsoleApp_Basketball.Controller
             Natification.Print(ConsoleColor.Cyan, "Enter the player ID you want to delete ");
 
         delete: string id2 = Console.ReadLine();
+            Console.Clear();
             int Id3;
             bool IsExist2 = int.TryParse(id2, out Id3);
             if (IsExist2)
