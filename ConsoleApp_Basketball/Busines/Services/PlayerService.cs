@@ -52,14 +52,10 @@ namespace Business.Services
                 throw;
             }
         }
-
-       
-        
-
+     
         public Player Update(int id, Player Player)
         {
      
-
             try
             {
                 Predicate<Player> predicate1 = x => x.Id == id;
@@ -85,8 +81,6 @@ namespace Business.Services
                     return Player;
                 }
 
-
-
             }
             catch (Exception)
             {
@@ -94,8 +88,6 @@ namespace Business.Services
                 throw;
             }
            
-           
-
         }
 
         public Player GetPlayer(int id)
@@ -103,7 +95,7 @@ namespace Business.Services
             try
             {
                 Predicate<Player> predicate = x => x.Id == id;
-               Player player = new Player();
+               Player player = DataAcces.DataConnect.Players.Find(predicate);
                 bool result = predicate(player);
                 if (result)
                 {
@@ -114,8 +106,6 @@ namespace Business.Services
                     Natification.Print(ConsoleColor.Red, "There is no such id");
                     return player;
                 }
-
-               
 
             }
             catch (Exception)

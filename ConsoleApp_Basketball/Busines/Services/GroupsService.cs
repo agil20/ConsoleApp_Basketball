@@ -57,7 +57,7 @@ namespace Business.Services
             try
             {
                 Predicate<Groups> predicate = x => x.Id == id;
-                Groups groups =new Groups();
+                Groups groups = DataAcces.DataConnect.Groups.Find(predicate);
                 bool result = predicate(groups);
                 if (result)
                 {
